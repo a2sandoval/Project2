@@ -1,0 +1,70 @@
+{
+    "attributes": [
+        {
+            "name": "Awareness",
+            "description": "Travelling the universe is a dangerous occupation, and you've really got to be aware of your surroundings. Whether it is spotting the object that has been disguised with a perception filer, or the Dalke Antibody that's just appearing round the corner, both use Awareness. Awareness takes into account anything that uses the five senses (sight, hearing, touch, smell, or taste), or even that indefinable sixth sense of just knowing that something is coming, senseing someone is looking at you, or talking behind your back. Awareness can be used to notice an enemy or look for clues.",
+            "lvlOne": "Oblivious to the goings on around them. Their friends frequently have to stop them from stepping out into busy traffic, and they usually miss important clues or signs.",
+            "lvlTwo": "Still lower than average, but this could be that they are preoccupied with something or easily distracted.",
+            "lvlThree": "Average person, fairly aware of their surroundings, likely to spot some hidden clues, notice the approaching enemy or hear the strange happenings going on in the flat upstairs.",
+            "lvlFour": "Above average, quick to notice when there is something wrong.",
+            "lvlFive": "Perceptive, aware of everything going on, can read others like a book, gut feelings are rarely wrong.",
+            "lvlSix": "Human maximum, incredibly rare. Takes in everything around them subconsciously, uncannily good at spotting clues. Able to read what people are really intending just by fluctiations in their voice, or notice the most minuscule details.",
+            "lvlSevenPlus": "Superhuman, possessing enhanced senses."
+        },
+        {
+            "name": "Coordination",
+            "description": "Some people are just better at controlling what their bodies do, rather than flailing wildly or fallingn over constantly. Characters with a higher Coordination can twirl batons, juggle, are pretty good at aiming weapons, and are great at paintball or laser-tag. Coordination is a combination of physical dexterity and hand-eye coordination (hence the name). You may not think it, but playing your average video game will need good Coordination just as much as healthier options like basketball or football. Doesn't mean the video gaming couch potato isn't lacking in other attribues though!",
+            "lvlOne": "A lot lower than your average person. They may have very poor control over their bodily movements, possible due to to being ungainly possibly due to being ungainly or a very slow reaction time.",
+            "lvlTwo": "Still less than average, they're sometimes clumsy, not brilliant shots and don't get the best scores on video games.",
+            "lvlThree": "Human average, meaning they're able and coordinated.",
+            "lvlFour": "Above average, with an almost athletic ability with good reflexes and hand-eye coordination",
+            "lvlFive": "Instinctive reactions, superior reflexes and best suited to professions where such abilities are key, such as pilots or racing drivers.",
+            "lvlSix": "Human maximum, the quickest and most agile people on Earth.",
+            "lvlSevenPlus": "Superhuman, special characters or aliens who move and aim with pinpoint accuracy."
+        },
+        {
+            "name": "Ingenuity",
+            "description": "The Doctor is all about brains over brawn, he can think (and usually talk) his way out of any situation. Knowledge is power, quite literally in most cases. Ingenuity is a measure of how smart a character is, their basic reasoning ability, coupled with general knowledge and practical experience. This doesn't cover a specific knowledge (that's what skills are for), or their aptitudes (those are covered with traits), merely the flexibility of mind and the general knowledge they have gethered. Ingenuity is all about how inventive they are, their lateral thinking as well as their overall intelligence.",
+            "lvlOne": "Someone who's not exactly quick witted. They may not necessarily be stupid, but it takes them a little longer thatn your average person to work things out (if at all), or they may be from a primitive cultures that doesn't respect reasoning or learning.",
+            "lvlTwo": "Still lower than average, and they are unlikely to have continued their studies (unles they got their qualification from Mrs Golightly's Happy Travelling University and Dry Cleaners). They may just not be interested and they certainly are't so hot when it comes to computer programming.",
+            "lvlThree": "Human average -- they understand mortgages and current affairs and have a good general education, grasps the basics of computers and technology and can come up with solutions to simple problems that get in their way.",
+            "lvlFour": "Above average -- you're talking University graduates (from a real University) with a flexible mind that can adapt itself to many circumstances and capable of deducing whodunnit from a few clues, possible doe to some natural talent.",
+            "lvlFive": "Well above average for a human, having a keen and penetrating mind that is full of useful general wisdom gained through a pursuit of knowledge, hard-earned practical experience and a natural gift towards applying their brains in novel ways.",
+            "lvlSix": "The Human maximum and one of the keenest intellects on the planet, with truly open minds able to make incredible leaps of reason.",
+            "lvlSevenPlus": "Superhuman intelligence or alien characters, and remarkable minds such as the Doctor."
+        },
+        {
+            "name": "Presence",
+            "description": "Some characters are impressive because of their actions, others are charming and highly charismatic by nature, still others are intimidating and a rare few arre all of these things at once. Characters with a low Presence are either easily ignored or unable to get dates, whereas characterrs with a high Presence can charm, carouse, and persuade their way out of trouble. Presence 1 is the lowest humanly possible, lower than this is purely for the bestial monsters of the galaxy.",
+            "lvlOne": "Socially inept or just plain rude (usually unintentionally). People can find it hard to get along with them and they may get ignored a little.",
+            "lvlTwo": "Off-putting, they could be arrogant and selfish, incredibly shy or just a little creepy.",
+            "lvlThree": "Human average, generally likeable and easy to get on with but not necessarily a strong leader.",
+            "lvlFour": "Charming and commanding. People pay attention to them and take notice of what they're saying.",
+            "lvlFive": "Silver-tongued or commanding, someone who can charm or boss their way through almost anything.",
+            "lvlSix": "Awe-inspiring, regarded with respect, people want to be with them.",
+            "lvlSevenPlus": "Alien or superhuman characters, whose commanding and charismatic presence can sway minds and influence thoughts."
+        },
+        {
+            "name": "Resolve",
+            "description": "Resolve is a measure of the character's determination and willpower. Whether it's something simple like resisting the urge to eat those chips even though you're on a diet or keeping your mind clear of guilty thoughts in the presence of the Teller. It also shows your determination to do something, how convincing you can be and how resolved to your cause you are. This determination can make an enemy pause before opening fire, change someon's mind or instill condifence in your colleagues.",
+            "lvlOne": "Weak-willed and easily persuaded, or possiibly lazy, crumbling quickly in the face of terror and adversity.",
+            "lvlTwo": "Less than your average human, failing to keep their New Year's Resolution beyond mid January, and quick to succumb to mind control.",
+            "lvlThree": "Human average, moderately strong willed, able to control themselves, though they'll freeze under gunfire just like any normal person would.",
+            "lvlFour": "A strength of will above your average person, enduring hardships and willing to face injury or death for their personal convictions and beliefs.",
+            "lvlFive": "Determined and resolute, at the peak of personal discipline and control, showing much stronger willpower than most people.",
+            "lvlSix": "Paragon of virtue, morally immovable and able to resist almost any temptation or fear.",
+            "lvlSevenPlus": "Alien resolve, the most iron willed and unstoppable of aliens or superhuman characters."
+        },
+        {
+            "name": "Strength",
+            "description": "Strength, just like the Defrabricator, does exactly what it says on the tin - it is a measure of how strong your character is. Stronger characters pack more of a punch when they have to resort to physical violence, are able to lift heavy objects or people, and can carry all that scientific equipment a lot further before having to take a rest. Stronger characters are usually physically active, sportsmen or women, or in the armed forces. Your average checkout girl at the supermarket may not be exactly feeble, but she's not going to be able to hold their own in an arm-wrestling contest with a weight lifter! Strength is also used to determine physical damage inflicted on others. The stronger the character is, the more damage they will do when they throw a punch. Every level of Strength relates to one point of damage infliced from a punch or kick. On average, a character can comfortably life around 15kgs for every level of Strength they have. They can carry this around for a while without too much of a strain, but in dire circumstances (and for short periods of time) they can lift twice this amount. So a character with Strength 3 can comfortably carry around 45kgs, or life 90kgs for a short period. In times of great stress, and with a suitable roll characters may lift even more than this when the adrenaline kicks in.",
+            "lvlOne": "Your typical weakling, winded ansering the door, has difficulty opening a packet of crisps.",
+            "lvlTwo": "Weaker than normal, stuggles changing a car tire, gets out of breath running for the bus.",
+            "lvlThree": "Average hyuman, able to hold their own in a fight, open the toughest of jar lids, and can carry someone on a stretcher for a good distance.",
+            "lvlFour": "Stronger than the average human.",
+            "lvlFive": "The toughest athletes, sportsmen and women.",
+            "lvlSix": "Human peak, capable of picking people up and throwing them over their heads. This srt of Strength is usually seen in proessional weightlifters or bodybuilders.",
+            "lvlSevenPlus": "Only for the specially enhanced characters or more-powerful aliens."
+        }
+    ]
+}

@@ -41,15 +41,15 @@ module.exports = function (app) {
 
    // Grab static info on skills
    app.get("/api/static/skills", function(req, res) {
-    db.StaticSkill.findAll({}).then(function (dbAttributes) {
-      res.json(dbAttributes);
+    db.StaticSkill.findAll({}).then(function (dbSkills) {
+      res.json(dbSkills);
     })
   });
 
    // Grab static info on traits
    app.get("/api/static/traits", function(req, res) {
-    db.StaticTrait.findAll({}).then(function (dbAttributes) {
-      res.json(dbAttributes);
+    db.StaticTrait.findAll({}).then(function (dbTraits) {
+      res.json(dbTraits);
     })
   });
 

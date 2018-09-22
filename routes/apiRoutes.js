@@ -31,6 +31,28 @@ module.exports = function (app) {
     })
   });
 
+
+  // Grab static info on attributes
+  app.get("/api/static/attributes", function(req, res) {
+    db.StaticAttribute.findAll({}).then(function (dbAttributes) {
+      res.json(dbAttributes);
+    })
+  });
+
+   // Grab static info on skills
+   app.get("/api/static/skills", function(req, res) {
+    db.StaticSkill.findAll({}).then(function (dbSkills) {
+      res.json(dbSkills);
+    })
+  });
+
+   // Grab static info on traits
+   app.get("/api/static/traits", function(req, res) {
+    db.StaticTrait.findAll({}).then(function (dbTraits) {
+      res.json(dbTraits);
+    })
+  });
+
   // Grab info for a single character
   app.get("/api/characters/:id", function (req, res) {
     db.Character.findAll({

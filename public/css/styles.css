@@ -1,3 +1,11 @@
 .switch label input[type=checkbox]:checked+.lever:after {
     background-color: #0d47a1;
 }
+
+.black-border {
+    border-top: 1px solid black;
+}
+
+.text-center {
+    text-align: center;
+}

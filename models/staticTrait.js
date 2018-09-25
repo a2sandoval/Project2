@@ -3,13 +3,13 @@ module.exports = function (sequelize, DataTypes) {
         name: DataTypes.STRING,
         designation: DataTypes.STRING,
         level: DataTypes.STRING,
-        cost: DataTypes.INT,
+        cost: DataTypes.INTEGER,
         description: DataTypes.TEXT,
         effect: DataTypes.TEXT,
-        modifier1: DataTypes.INT,
-        modifier2: DataTypes.INT,
-        opposite1: DataTypes.INT,
-        opposite2: DataTypes.INT
+        modifier1: DataTypes.INTEGER,
+        modifier2: DataTypes.INTEGER,
+        opposite1: DataTypes.INTEGER,
+        opposite2: DataTypes.INTEGER
     });
     
     return StaticTrait;

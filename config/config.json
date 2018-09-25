@@ -1,8 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "R!zzo99886",
-    "database": "doctor_who",
+
+    "password": "Password1!",
+    "database": "blogger",
+   
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"

@@ -2,7 +2,7 @@ module.exports = function (sequelize, DataTypes) {
     // Variables start with "sk" to help differentiate in other files
     var CharacterSkill = sequelize.define("CharacterSkill", {
         skAthletics: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skConvince: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skCraft: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -26,7 +26,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skFighting: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -34,7 +34,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skKnowledge: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -42,7 +42,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skMarksman: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -50,7 +50,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skMedicine: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -58,7 +58,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skScience: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -66,7 +66,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skSubterfuge: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -74,7 +74,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skSurvival: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -82,7 +82,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skTechnology: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,
@@ -90,7 +90,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         skTransport: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 0,

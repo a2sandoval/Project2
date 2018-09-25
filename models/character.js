@@ -40,27 +40,18 @@ module.exports = function (sequelize, DataTypes) {
 
     Character.associate = function (models) {
         // Connect the character to its associated row of character Attributes
-        Character.belongsTo(models.CharacterAttr, {
-            onDelete: "cascade",
-            foreignKey: {
-                allowNull: false
-            }
+        Character.hasOne(models.CharacterAttr, {
+            onDelete: "cascade"
         });
 
         // Connect the character to its associated row of Character Skills
-        Character.belongsTo(models.CharacterSkill, {
-            onDelete: "cascade",
-            foreignKey: {
-                allowNull: false
-            }
+        Character.hasOne(models.CharacterSkill, {
+            onDelete: "cascade"
         });
 
         // Connect the character to its associated row of trait
-        Character.belongsTo(models.CharacterTrait, {
-            onDelete: "cascade",
-            foreignKey: {
-                allowNull: false
-            }
+        Character.hasOne(models.CharacterTrait, {
+            onDelete: "cascade"
         });
     };
 

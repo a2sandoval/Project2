@@ -6,7 +6,7 @@ module.exports = function (sequelize, DataTypes) {
     // Players can only create characters with a value from 1 to 6
     var CharacterAttr = sequelize.define("CharacterAttr", {
         attrAwMax: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -14,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrAwCurr: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -22,7 +22,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrCoMax: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -30,7 +30,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrCoCurr: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -38,7 +38,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrInMax: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -46,7 +46,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrInCurr: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -54,7 +54,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrPrMax: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -62,7 +62,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrPrCurr: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -70,7 +70,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrReMax: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -78,7 +78,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrReCurr: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -86,7 +86,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrStMax: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,
@@ -94,7 +94,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         attrStCurr: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 min: 1,

@@ -99,34 +99,34 @@ var formSubmit = function (event) {
 
   // TODO: correct references
   var charAttributes = {
-    attrAwMax: 1,
-    attrAwCurr: 1,
-    attrCoMax: 1,
-    attrCoCurr: 1,
-    attrInMax: 1,
-    attrInCurr: 1,
-    attrPrMax: 1,
-    attrPrCurr: 1,
-    attrReMax: 1,
-    attrReCurr: 1,
-    attrStMax: 1,
-    attrStCurr: 1
+    attrAwMax: $("#attrAw").val(),
+    attrAwCurr: $("#attrAw").val(),
+    attrCoMax: $("#attrCo").val(),
+    attrCoCurr: $("#attrCo").val(),
+    attrInMax: $("#attrIn").val(),
+    attrInCurr: $("#attrIn").val(),
+    attrPrMax: $("#attrPr").val(),
+    attrPrCurr: $("#attrPr").val(),
+    attrReMax: $("#attrRe").val(),
+    attrReCurr: $("#attrRe").val(),
+    attrStMax: $("#attrSt").val(),
+    attrStCurr:$("#attrSt").val(),
   }
 
   // TODO: correct reference
   var charSkillz = {
-    skAthletics: 0,
-    skConvince: 0,
-    skCraft: 0,
-    skFighting: 0,
-    skKnowledge: 0,
-    skMarksman: 0,
-    skMedicine: 0,
-    skScience: 0,
-    skSubterfuge: 0,
-    skSurvival: 0,
-    skTechnology: 0,
-    skTransport: 0
+    skAthletics: $("#skAthletics"),
+    skConvince: $("#skConvince"),
+    skCraft: $("#skCraft"),
+    skFighting: $("#skFighting"),
+    skKnowledge: $("#skKnowledge"),
+    skMarksman: $("#skMarksman"),
+    skMedicine: $("#skMedicine"),
+    skScience: $("skScience"),
+    skSubterfuge: $("skSubterfuge"),
+    skSurvival: $("skSkurvival"),
+    skTechnology: $("#skTechnology"),
+    skTransport: $("#skTransport")
   };
 
   // TODO: correct references
@@ -145,7 +145,18 @@ var formSubmit = function (event) {
     trait12: 0
   };
 };
+  var count = 1;
 
+  $("input:checked").each(function(){
+    if (count <=12) {
+      var id = $(this).attr("data-id");
+      var x = "trait" + count;
+      charTraits[x] = id;
+      count++;
+    }
+  });
+
+  
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function () {

@@ -14,16 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-// Handlebars
-// app.engine(
-//   "handlebars",
-//   exphbs({
-//     defaultLayout: "main"
-//   })
-// );
-// app.set("view engine", "handlebars");
-
-// Routes
+//Routes
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
@@ -46,4 +37,4 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
-//module.exports = app;
+module.exports = app;

@@ -7,17 +7,18 @@ module.exports = function (app) {
     //res.sendFile(path.join(__dirname, "/index.html"));
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
-
+  app.get("/character/create", function (req, res) {
+    //res.sendFile(path.join(__dirname, "/create.html"));
+    res.sendFile(path.join(__dirname, "../public/create.html"));
+  });
+  
   // Load the page for a single character
   app.get("/character/:id", function (req, res) {
     //res.sendFile(path.join(__dirname, "/characters.html"));
     res.sendFile(path.join(__dirname, "../public/characters.html"));
   });
 
-  app.get("/character/create", function (req, res) {
-    //res.sendFile(path.join(__dirname, "/create.html"));
-    res.sendFile(path.join(__dirname, "../public/create.html"));
-  });
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

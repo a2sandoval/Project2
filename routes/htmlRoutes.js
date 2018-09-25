@@ -5,13 +5,13 @@ module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
     //res.sendFile(path.join(__dirname, "/index.html"));
-    res.sendFile(path.join(__dirname, "../public/create.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   // Load the page for a single character
   app.get("/character/:id", function (req, res) {
     //res.sendFile(path.join(__dirname, "/characters.html"));
-    res.sendFile(path.join(__dirname, "../public/create.html"));
+    res.sendFile(path.join(__dirname, "../public/characters.html"));
   });
 
   app.get("/character/create", function (req, res) {
@@ -23,6 +23,6 @@ module.exports = function (app) {
   app.get("*", function (req, res) {
     //res.render("404");
     //res.sendFile(path.join(__dirname, "404.html"));
-    res.sendFile(path.join(__dirname, "../public/create.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 };

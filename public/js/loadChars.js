@@ -9,7 +9,7 @@ function createCharCard(info) {
     var description = $("<p>").text(info.description);
     content.append(name, description);
     var links = $("<div>").addClass("card-action");
-    var view = $("<a>").addClass("blue-text text-darken-2").attR("href", "/character/" + info.id).text("View Character");
+    var view = $("<a>").addClass("blue-text text-darken-2").attr("href", "/character/" + info.id).text("View Character");
     var edit = $("<a>").addClass("blue-text text-darken-2").attr("href", "#").text("Edit Character");
     links.append(view, edit);
     stacked.append(content, links);

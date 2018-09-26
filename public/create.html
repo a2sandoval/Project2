@@ -105,255 +105,276 @@
         </form>
       </div>
     </div>
-    <div class="">
-      <!--   Characteristics Section   -->
-      <div class="section">
-        <h2>Attributes</h2>
-        <h6><span id="characterPoints">18</span> Character Points left!</h6>
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-  
-              <div class="col s1 m3 l4">
-                <label>Awareness</label>
-                <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrAw" min="0" max="24">
-              </div>
-  
-              <div class="col s1 m3 l4">
-                <label>Coordination</label>
-                <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrCo" min="0" max="24">
-              </div>
-  
-              <div class="col s1 m3 l4">
-                <label>Ingenuity</label>
-                <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrIn" min="0" max="24">
-              </div>
-  
-              <div class="col s1 m3 l4">
-                <label>Presence</label>
-                <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrPr" min="0" max="24">
-              </div>
-  
-  
-              <div class="col s1 m3 l4">
-                <label>Resolve</label>
-                <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrRe" min="0" max="24">
-              </div>
-  
-              <div class="col s1 m3 l4">
-                <label>Strength</label>
-                <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrSt" min="0" max="24">
-              </div>
-  
-  
+    <!--   Characteristics Section   -->
+    <div class="section">
+      <h2>Attributes</h2>
+      <h6><span id="characterPoints">18</span> Character Points left!</h6>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+
+            <div class="col s1 m3 l4">
+              <label>Awareness</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrAw" min="0" max="24">
             </div>
-  
-          </form>
-  
-        </div>
-        <!------- Traits Section-------->
-  
-        <div class="section">
-          <h2>Traits</h2>
-          <h6><span id="characterPoints2">18</span> Character Points left!</h6>
-          <div class="row">
-            <form class="col s12">
-              <div class="row" id="traitsHere">
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch">
-                    <label>
-                      Off
-                      <input type="checkbox" class="blue darken-4" unchecked id="trait">
-                      <span class="lever blue darken-4"></span>
-                      On
-                    </label>
-                  </div>
-                </div>
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch">
-                    <label>
-                      Off
-                      <input type="checkbox" class="blue darken-4" unchecked id="trait2">
-                      <span class="lever blue darken-4"></span>
-                      On
-                    </label>
-                  </div>
-                </div>
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch"><label>Off<input type="checkbox" class="blue darken-4" unchecked>
-                      <span class="lever blue darken-4"></span>On</label></div>
-                </div>
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch"><label>Off<input type="checkbox" class="blue darken-4" unchecked>
-                      <span class="lever blue darken-4"></span>On</label></div>
-                </div>
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch"><label>Off<input type="checkbox" class="blue darken-4" unchecked>
-                      <span class="lever blue darken-4"></span>On</label></div>
-                </div>
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch"><label>Off<input type="checkbox" class="blue darken-4" unchecked>
-                      <span class="lever blue darken-4"></span>On</label></div>
-                </div>
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch"><label>Off<input type="checkbox" class="blue darken-4" unchecked>
-                      <span class="lever blue darken-4"></span>On</label></div>
-                </div>
-  
-                <div class="col s1 m3 l3">
-                  <label>Trait 1</label>
-                  <div class="switch"><label>Off<input type="checkbox" class="blue darken-4" unchecked>
-                      <span class="lever blue darken-4"></span>On</label></div>
-                </div>
-  
-  
-  
-  
-              </div>
-  
-            </form>
-          </div>
-    </div>
-        <!------- Attributes Section ------>
 
-        <div class="section ">
-          <h2>Skills</h2>
-          <h6><span id="skillzPoints">18</span> points left!</h6>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-
-                <div class="col s1 m3 l3">
-                  <label>Athletics</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skAthletics" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Convince</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skConvince" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Craft</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skCraft" min="0" max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Fighting</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skFighting" min="0"
-                    max="24">
-                </div>
-
-
-                <div class="col s1 m3 l3">
-                  <label>Knowledge</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skKnowledge" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Marksman</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skMarksman" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Medicine</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skMedicine" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Science</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skScience" min="0" max="24">
-                </div>
-
-
-                <div class="col s1 m3 l3">
-                  <label>Subterfuge</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skSubterfuge" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Survival</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skSurvival" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Technology</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skTechnology" min="0"
-                    max="24">
-                </div>
-
-                <div class="col s1 m3 l3">
-                  <label>Transport</label>
-                  <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skTransport" min="0"
-                    max="24">
-                </div>
-
-
-              </div>
-
-            </form>
-
-          </div>
-          <div class="row">
-            <div class="col s12 offset-s9 ms6 offset-s7 l12 offset-l10">
-              <br>
-              <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-              </button>
+            <div class="col s1 m3 l4">
+              <label>Coordination</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrCo" min="0" max="24">
             </div>
-          </div>
-        </div>
 
+            <div class="col s1 m3 l4">
+              <label>Ingenuity</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrIn" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l4">
+              <label>Presence</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrPr" min="0" max="24">
+            </div>
+
+
+            <div class="col s1 m3 l4">
+              <label>Resolve</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrRe" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l4">
+              <label>Strength</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=1 id="attrSt" min="0" max="24">
+            </div>
+
+
+          </div>
+
+        </form>
 
       </div>
+    </div>
+    <!------- Traits Section-------->
 
+    <div class="section">
+      <h2>Traits</h2>
+      <h6><span id="characterPoints2">18</span> Character Points left!</h6>
+      <div class="row">
+        <form class="col s12">
+          <div class="row" id="traitsHere">
 
-
-      <footer class="page-footer  light-blue darken-4">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Team Bio</h5>
-              <p class="grey-text text-lighten-4">We are a team of Coding Bootcamp students working on this project
-                like
-                it's our full time job. Check out our github below!</p>
-
-              <div class="footer-copyright">
-                <div class="container">
-                  Check us out on <a class=" text-lighten-3" href="">Github</a>
-                </div>
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked id="trait">
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
               </div>
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked id="trait2">
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
+              </div>
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked>
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
+              </div>
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked>
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
+              </div>
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked>
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
+              </div>
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked>
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
+              </div>
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked>
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
+              </div>
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Trait 1</label>
+              <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" class="blue darken-4" unchecked>
+                  <span class="lever blue darken-4"></span>
+                  On
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!------- Attributes Section ------>
+
+    <div class="section ">
+      <h2>Skills</h2>
+      <h6><span id="skillzPoints">18</span> points left!</h6>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+
+            <div class="col s1 m3 l3">
+              <label>Athletics</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skAthletics" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Convince</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skConvince" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Craft</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skCraft" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Fighting</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skFighting" min="0" max="24">
+            </div>
+
+
+            <div class="col s1 m3 l3">
+              <label>Knowledge</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skKnowledge" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Marksman</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skMarksman" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Medicine</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skMedicine" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Science</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skScience" min="0" max="24">
+            </div>
+
+
+            <div class="col s1 m3 l3">
+              <label>Subterfuge</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skSubterfuge" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Survival</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skSurvival" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Technology</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skTechnology" min="0" max="24">
+            </div>
+
+            <div class="col s1 m3 l3">
+              <label>Transport</label>
+              <input oninput="shareTreasure()" type="number" class="short-input" value=0 id="skTransport" min="0" max="24">
+            </div>
+
+
+          </div>
+
+        </form>
+
+      </div>
+      <div class="row">
+        <div class="col s12 offset-s9 ms6 offset-s7 l12 offset-l10">
+          <br>
+          <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 
 
 
-      </footer>
+  <footer class="page-footer  light-blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Team Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of Coding Bootcamp students working on this project
+            like
+            it's our full time job. Check out our github below!</p>
 
-      <!--JavaScript at end of body for optimized loading-->
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="js/loadTraits.js"></script>
+          <div class="footer-copyright">
+            <div class="container">
+              Check us out on <a class=" text-lighten-3" href="">Github</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/loadTraits.js"></script>
 </body>
 
 </html>

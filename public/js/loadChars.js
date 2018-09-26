@@ -9,7 +9,7 @@ function createCharCard(info) {
     var description = $("<p>").text(info.description);
     content.append(name, description);
     var links = $("<div>").addClass("card-action");
-    var view = $("<a>").addClass("blue-text text-darken-2").attr("href", "/character/" + info.id).text("View Character");
+    var view = $("<a>").addClass("blue-text text-darken-2").attR("href", "/character/" + info.id).text("View Character");
     var edit = $("<a>").addClass("blue-text text-darken-2").attr("href", "#").text("Edit Character");
     links.append(view, edit);
     stacked.append(content, links);
@@ -22,7 +22,7 @@ function loadAllCharacters() {
         method: "GET",
         url: "/api/characters"
     }).then(function (data) {
-        for (var i=0; i<data.length; i++) {
+        for (var i = 0; i < data.length; i++) {
             var newChar = createCharCard(data[i]);
             $("#charsHere").append(newChar);
         }
@@ -37,6 +37,6 @@ function loadAllCharacters() {
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     loadAllCharacters();
 })

@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
 function createCharCard(info) {
     var displayChar = $("<div>").addClass("card horizontal max-card-height");
     var divImage = $("<div>").addClass("card-image");
@@ -40,3 +44,4 @@ function loadAllCharacters() {
 $(document).ready(function() {
     loadAllCharacters();
 })
+

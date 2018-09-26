@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
 function createTrait(info) {
     var newTrait = $("<div>").addClass("col s1 m3");
     var mainLabel = $("<label>").html(info.name);
@@ -30,3 +34,4 @@ $(document).ready(function() {
     console.log("bonjour");
     loadAllTraits();
 });
+

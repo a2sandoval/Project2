@@ -9,24 +9,31 @@ function createTrait(info) {
     switchDiv.append(subLabel);
     newTrait.append(mainLabel, switchDiv);
     return newTrait;
-}
+};
 
 function loadAllTraits() {
     console.log("hullo");
     $.ajax({
         method: "GET",
         url: "/api/static/traits"
-    }).then(function(data) {
+    }).then(function (data) {
         console.log(data);
         // loop through all traits
-        for (var i=0; i<data.length; i++) {
+        var testTrait = {
+            name: "Test Trait",
+            id: 0,
+            cost: 5
+        };
+        var testTraitttt = createTrait(testTrait);
+        for (var i = 0; i < data.length; i++) {
             var newTrait = createTrait(data[i]);
             $("#traitsHere").append(newTrait);
-        }
+        };
+        $("#traitsHere").append(testTraitttt);        
     });
-}
+};
 
-$(document).ready(function() {
+$(document).ready(function () {
     console.log("bonjour");
     loadAllTraits();
 });

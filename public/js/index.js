@@ -96,38 +96,62 @@ var formSubmit = function (event) {
     background: $("#character_background").val().trim(),
     stuff: "stuff"
   };
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/characters",
+    data: JSON.stringify(charTraits)
+  });
 
   // TODO: correct references
   var charAttributes = {
-    attrAwMax: 1,
-    attrAwCurr: 1,
-    attrCoMax: 1,
-    attrCoCurr: 1,
-    attrInMax: 1,
-    attrInCurr: 1,
-    attrPrMax: 1,
-    attrPrCurr: 1,
-    attrReMax: 1,
-    attrReCurr: 1,
-    attrStMax: 1,
-    attrStCurr: 1
-  }
+    attrAwMax: $("attrAw").val(),
+    attrAwCurr: $("attrAw").val(),
+    attrCoMax: $("attrCo").val(),
+    attrCoCurr: $("attrCo").val(),
+    attrInMax: $("attrIn").val(),
+    attrInCurr: $("attrIn").val(),
+    attrPrMax: $("attrPr").val(),
+    attrPrCurr: $("attrPr").val(),
+    attrReMax: $("attrRe").val(),
+    attrReCurr: $("attrRe").val(),
+    attrStMax: $("attrSt").val(),
+    attrStCurr: $("attrSt").val()
+  };
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/attributes",
+    data: JSON.stringify(charTraits)
+  });
 
   // TODO: correct reference
   var charSkillz = {
-    skAthletics: 0,
-    skConvince: 0,
-    skCraft: 0,
-    skFighting: 0,
-    skKnowledge: 0,
-    skMarksman: 0,
-    skMedicine: 0,
-    skScience: 0,
-    skSubterfuge: 0,
-    skSurvival: 0,
-    skTechnology: 0,
-    skTransport: 0
+    skAthletics: $("#skAthletics").val(),
+    skConvince: $("#skConvince").val(),
+    skCraft: $("#skCraft").val(),
+    skFighting: $("#skFighting").val(),
+    skKnowledge: $("#skKnowledge").val(),
+    skMarksman: $("#skMarksman").val(),
+    skMedicine: $("#skMedicine").val(),
+    skScience: $("#skScience").val(),
+    skSubterfuge: $("#skSubterfuge").val(),
+    skSurvival: $("#skSurvival").val(),
+    skTechnology: $("#skTechnology").val(),
+    skTransport: $("#skTransport").val()
   };
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/skills",
+    data: JSON.stringify(charTraits)
+  });
 
   // TODO: correct references
   var charTraits = {
@@ -144,6 +168,23 @@ var formSubmit = function (event) {
     trait11: 0,
     trait12: 0
   };
+  var count = 1;
+  $("input[type=checkbox]").each(function () {
+    if (count <= 12) {
+      var temp = "trait" + count;
+      charTraits[x] = $(this).attr("data-id");
+      count++;
+    }
+  });
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/traits",
+    data: JSON.stringify(charTraits)
+  });
+
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -159,5 +200,5 @@ var handleDeleteBtnClick = function () {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
+$submitBtn.on("click", formSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);

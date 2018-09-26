@@ -26,7 +26,7 @@ function loadAllCharacters() {
         method: "GET",
         url: "/api/characters"
     }).then(function (data) {
-        for (var i=0; i<data.length; i++) {
+        for (var i = 0; i < data.length; i++) {
             var newChar = createCharCard(data[i]);
             $("#charsHere").append(newChar);
         }
@@ -41,7 +41,10 @@ function loadAllCharacters() {
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     loadAllCharacters();
 })
+<<<<<<< HEAD
 
+=======
+>>>>>>> cf5929d36fd2b97d7f56019acc9886703563930f

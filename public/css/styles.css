@@ -13,3 +13,7 @@
 .max-card-height {
     height: 200px;
 }
+
+.small-padding {
+    padding: 10px;
+}

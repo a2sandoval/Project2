@@ -9,6 +9,10 @@
     <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Your Character</title>
 </head>
 
 <body>
@@ -16,14 +20,12 @@
     <nav class=" light-blue darken-4 " role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">The What?</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="create.html">Create a Character</a></li>
-                <li><a href="#">Your Character</a></li>
-                <li><a href="./characters.html">Created Characters</a></li>
+                <li><a href="/character/create">Create a Character</a></li>
+                <li><a href="/">Created Characters</a></li>
             </ul>
             <ul id="nav-mobile" class="sidenav">
-                <li><a href="create.html">Create a Character</a></li>
-                <li><a href="#">Your Character</a></li>
-                <li><a href="./characters.html">Created Characters</a></li>
+                <li><a href="/character/create">Create a Character</a></li>
+                <li><a href="/">Created Characters</a></li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -45,7 +47,7 @@
                 <div class="card" style="width: 28rem; float: right;">
                     <div class="card-body">
                         <h5 class="card-title-center" style="text-align: center" id="Backgorund">Background</h5>
-                        <p class="card-text" id="background-here"></p>
+                        <p class="card-text small-padding" id="background-here"></p>
                     </div>
                 </div>
             </div>
@@ -69,7 +71,7 @@
                         <h1 class="center orange-text">Skills</h1>
                     </div>
                     <div class="card-body">
-                        <p class="card-text-center">*Skills selected import here*</p>
+                        <p class="card-text-center" id="skillz-here"></p>
                     </div>
                 </div>
             </div>
@@ -80,7 +82,7 @@
                         <h1 class="center orange-text">Traits</h1>
                     </div>
                     <div class="card-body">
-                        <p class="card-text-center">*Traits selected import here*</p>
+                        <p class="card-text-center" id="traits-here"></p>
                     </div>
                 </div>
             </div>
@@ -120,8 +122,54 @@
                 row3.append(attr5, attr6);
                 $("#attributes-here").append(row1, row2, row3);
 
+                var row11 = $("<div>").addClass("row");
+                var row21 = $("<div>").addClass("row");
+                var row31 = $("<div>").addClass("row");
+                var row41 = $("<div>").addClass("row");
+                var sk1 = $("<h5>").text("Athletics: " + data[0].CharacterSkill.skAthletics).addClass("center-align col s4");
+                var sk2 = $("<h5>").text("Convince: " + data[0].CharacterSkill.skConvince).addClass("center-align col s4");
+                var sk3 = $("<h5>").text("Craft: " + data[0].CharacterSkill.skCraft).addClass("center-align col s4");
+                var sk4 = $("<h5>").text("Fighting: " + data[0].CharacterSkill.skFighting).addClass("center-align col s4");
+                var sk5 = $("<h5>").text("Knowledge: " + data[0].CharacterSkill.skKnowledge).addClass("center-align col s4");
+                var sk6 = $("<h5>").text("Marksman: " + data[0].CharacterSkill.skMarksman).addClass("center-align col s4");
+                var sk7 = $("<h5>").text("Medicine: " + data[0].CharacterSkill.skMedicine).addClass("center-align col s4");
+                var sk8 = $("<h5>").text("Science: " + data[0].CharacterSkill.skScience).addClass("center-align col s4");
+                var sk9 = $("<h5>").text("Subterfuge: " + data[0].CharacterSkill.skSubterfuge).addClass("center-align col s4");
+                var sk10 = $("<h5>").text("Survival: " + data[0].CharacterSkill.skSurvival).addClass("center-align col s4");
+                var sk11 = $("<h5>").text("Technology: " + data[0].CharacterSkill.skTechnology).addClass("center-align col s4");
+                var sk12 = $("<h5>").text("Transport: " + data[0].CharacterSkill.skTransport).addClass("center-align col s4");
+                row11.append(sk1, sk2, sk3);
+                row21.append(sk4, sk5, sk6);
+                row31.append(sk7, sk8, sk9);
+                row41.append(sk10, sk11, sk12);
+                $("#attributes-here").append(row1, row2, row3);
+                $("#skillz-here").append(row11, row21, row31, row41);
+                getTraits();
             });
         };
+
+        function getTraits() {
+            for (var i = 0; i <= 12; i++) {
+                var traitName = "trait" + i;
+                if (data[0].CharacterTrait[traitName] === 0) {
+                    return;
+                } else {
+                    var targetURL = "/api/static/traits/" + data[0].CaracterTrait[traitName];
+                    $.ajax({
+                        method: "GET",
+                        url: targetURL
+                    }).then(function (data) {
+                        var sec = $("<div>").addClass("section");
+                        var title = $("<h5>").text(data[0].name);
+                        var description = $("<p>").text(data[0].description);
+                        var effect = $("<p>").text(data[0].effect);
+                        sec.append(title, description, effect);
+                        $("#traits-here").append(sec);
+                    });
+                }
+            }
+            return;
+        }
 
         function getCharacterId() {
             var url = window.location.href;

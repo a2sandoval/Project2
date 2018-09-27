@@ -106,11 +106,7 @@ module.exports = function (sequelize, DataTypes) {
 
     // Associate this model with the Character Model
     CharacterAttr.associate = function (models) {
-        CharacterAttr.belongsTo(models.Character, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
+        CharacterAttr.hasOne(models.Character);
     };
 
     return CharacterAttr;

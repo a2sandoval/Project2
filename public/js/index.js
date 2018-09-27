@@ -30,8 +30,6 @@ var API = {
   }
 };
 
-
-
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function () {
   API.getExamples().then(function (data) {
@@ -98,38 +96,62 @@ var formSubmit = function (event) {
     background: $("#character_background").val().trim(),
     stuff: "stuff"
   };
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/characters",
+    data: JSON.stringify(charTraits)
+  });
 
   // TODO: correct references
   var charAttributes = {
-    attrAwMax: $("#attrAw").val(),
-    attrAwCurr: $("#attrAw").val(),
-    attrCoMax: $("#attrCo").val(),
-    attrCoCurr: $("#attrCo").val(),
-    attrInMax: $("#attrIn").val(),
-    attrInCurr: $("#attrIn").val(),
-    attrPrMax: $("#attrPr").val(),
-    attrPrCurr: $("#attrPr").val(),
-    attrReMax: $("#attrRe").val(),
-    attrReCurr: $("#attrRe").val(),
-    attrStMax: $("#attrSt").val(),
-    attrStCurr:$("#attrSt").val(),
-  }
+    attrAwMax: $("attrAw").val(),
+    attrAwCurr: $("attrAw").val(),
+    attrCoMax: $("attrCo").val(),
+    attrCoCurr: $("attrCo").val(),
+    attrInMax: $("attrIn").val(),
+    attrInCurr: $("attrIn").val(),
+    attrPrMax: $("attrPr").val(),
+    attrPrCurr: $("attrPr").val(),
+    attrReMax: $("attrRe").val(),
+    attrReCurr: $("attrRe").val(),
+    attrStMax: $("attrSt").val(),
+    attrStCurr: $("attrSt").val()
+  };
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/attributes",
+    data: JSON.stringify(charTraits)
+  });
 
   // TODO: correct reference
   var charSkillz = {
-    skAthletics: $("#skAthletics"),
-    skConvince: $("#skConvince"),
-    skCraft: $("#skCraft"),
-    skFighting: $("#skFighting"),
-    skKnowledge: $("#skKnowledge"),
-    skMarksman: $("#skMarksman"),
-    skMedicine: $("#skMedicine"),
-    skScience: $("skScience"),
-    skSubterfuge: $("skSubterfuge"),
-    skSurvival: $("skSkurvival"),
-    skTechnology: $("#skTechnology"),
-    skTransport: $("#skTransport")
+    skAthletics: $("#skAthletics").val(),
+    skConvince: $("#skConvince").val(),
+    skCraft: $("#skCraft").val(),
+    skFighting: $("#skFighting").val(),
+    skKnowledge: $("#skKnowledge").val(),
+    skMarksman: $("#skMarksman").val(),
+    skMedicine: $("#skMedicine").val(),
+    skScience: $("#skScience").val(),
+    skSubterfuge: $("#skSubterfuge").val(),
+    skSurvival: $("#skSurvival").val(),
+    skTechnology: $("#skTechnology").val(),
+    skTransport: $("#skTransport").val()
   };
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/skills",
+    data: JSON.stringify(charTraits)
+  });
 
   // TODO: correct references
   var charTraits = {
@@ -146,19 +168,25 @@ var formSubmit = function (event) {
     trait11: 0,
     trait12: 0
   };
-};
   var count = 1;
-
-  $("input:checked").each(function(){
-    if (count <=12) {
-      var id = $(this).attr("data-id");
-      var x = "trait" + count;
-      charTraits[x] = id;
+  $("input[type=checkbox]").each(function () {
+    if (count <= 12) {
+      var temp = "trait" + count;
+      charTraits[x] = $(this).attr("data-id");
       count++;
     }
   });
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/characters/traits",
+    data: JSON.stringify(charTraits)
+  });
 
-  
+};
+
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function () {
@@ -172,9 +200,5 @@ var handleDeleteBtnClick = function () {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
+$submitBtn.on("click", formSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-
-$(document).ready(function(){
-  $('.sidenav').sidenav();
-});

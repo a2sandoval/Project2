@@ -1,9 +1,5 @@
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-
 function createCharCard(info) {
-    var displayChar = $("<div>").addClass("card horizontal max-card-height");
+    var displayChar = $("<div>").addClass("card horizontal medium");
     var divImage = $("<div>").addClass("card-image");
     var image = "<img src='" + info.image + "'/>";
     divImage.append(image);
@@ -36,15 +32,16 @@ function loadAllCharacters() {
             id: 1,
             description: "The 10th Doctor is played by David Tenant. He is many people's favorite Doctor. He has a british accent but is actually scottish."
         }
-        var charrr = createCharCard(charr);
-        $("#charsHere").append(charrr);
+        var charrr = {
+            image: "https://i.pinimg.com/originals/68/e9/29/68e92935f174eac5ae7552ec03d8c95d.jpg",
+            name: "Poppy 'Oz' Osgood",
+            id: 2,
+            description: "Known globally as Oz, Poppy is a famous rockstar who moonlights as a Torchwood Informant on the side."
+        };
+        $("#charsHere").append(createCharCard(charr), createCharCard(charrr));
     });
 }
 
 $(document).ready(function () {
     loadAllCharacters();
 })
-<<<<<<< HEAD
-
-=======
->>>>>>> cf5929d36fd2b97d7f56019acc9886703563930f

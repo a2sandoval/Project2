@@ -1,7 +1,3 @@
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-
 function createTrait(info) {
     var newTrait = $("<div>").addClass("col s1 m3");
     var mainLabel = $("<label>").html(info.name);
@@ -16,12 +12,12 @@ function createTrait(info) {
 };
 
 function loadAllTraits() {
-    console.log("hullo");
+    //console.log("hullo");
     $.ajax({
         method: "GET",
         url: "/api/static/traits"
     }).then(function (data) {
-        console.log(data);
+        //console.log(data);
         // loop through all traits
         var testTrait = {
             name: "Test Trait",
@@ -33,12 +29,11 @@ function loadAllTraits() {
             var newTrait = createTrait(data[i]);
             $("#traitsHere").append(newTrait);
         };
-        $("#traitsHere").append(testTraitttt);        
+        $("#traitsHere").append(testTraitttt);
     });
 };
 
 $(document).ready(function () {
-    console.log("bonjour");
+    //console.log("bonjour");
     loadAllTraits();
 });
-

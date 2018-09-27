@@ -101,11 +101,7 @@ module.exports = function (sequelize, DataTypes) {
 
     // Connect to character
     CharacterSkill.associate = function (models) {
-        CharacterSkill.belongsTo(models.Character, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
+        CharacterSkill.hasOne(models.Character);
     };
 
     return CharacterSkill;

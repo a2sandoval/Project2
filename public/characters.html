@@ -4,27 +4,139 @@
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
-
-
-
+    <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <!--NAV Bar-->
+    <nav class=" light-blue darken-4 " role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">The What?</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="create.html">Create a Character</a></li>
+                <li><a href="#">Your Character</a></li>
+                <li><a href="./characters.html">Created Characters</a></li>
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="create.html">Create a Character</a></li>
+                <li><a href="#">Your Character</a></li>
+                <li><a href="./characters.html">Created Characters</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
 
+    <!-- Page Content goes here -->
+    <div>
+        <h2 class="center" id="charactername">"Character Name Imports here"</h2>
+        <h5 class="center blue-text" id="playername">"Player Name Imports here"</h5>
+    </div>
+    <!-- Load Chacater Image here-->
+    <div class="container">
+        <div class="col-sm-6">
+            <img id="charimg" style="width: 50%; float: left;" src="https://cdn.europosters.eu/image/1300/posters/dr-who-dalek-i2804.jpg"
+                alt="Card image cap">
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="card" style="width: 28rem; float: right;">
+                    <div class="card-body">
+                        <h5 class="card-title-center" style="text-align: center" id="Backgorund">Background</h5>
+                        <p class="card-text" id="background-here"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!--Attributes Displayed-->
+        <div class="row" id="Attr">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h1 class="center orange-text">Attributes</h1>
+                </div>
+                <div class="card-body">
+                    <p class="card-text-center" id="attributes-here"></p>
+                </div>
+            </div>
+            <!--Skills Displayed-->
+            <div class="row" id="Skills">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h1 class="center orange-text">Skills</h1>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text-center">*Skills selected import here*</p>
+                    </div>
+                </div>
+            </div>
+            <!--Traits Displayed-->
+            <div class="row" id="Traits">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h1 class="center orange-text">Traits</h1>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text-center">*Traits selected import here*</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer  light-blue darken-4"></footer>
     <!--JavaScript at end of body for optimized loading-->
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        console.log("bonjour");
+
+        function loadCharacter() {
+            var targetURL = "/api/character/" + getCharacterId();
+            $.ajax({
+                method: "GET",
+                url: targetURL
+            }).then(function (data) {
+                console.log(data);
+                $("#charactername").text(data[0].charName);
+                $("#playername").text(data[0].playerName);
+                $("#charimg").attr("src", data[0].image);
+                $("#background-here").text(data[0].background);
+
+                var row1 = $("<div>").addClass("row");
+                var row2 = $("<div>").addClass("row");
+                var row3 = $("<div>").addClass("row");
+                var attr1 = $("<h4>").text("Awareness: " + data[0].CharacterAttr.attrAwMax).addClass("center-align col s6");
+                var attr2 = $("<h4>").text("Coordination: " + data[0].CharacterAttr.attrCoMax).addClass("center-align col s6");
+                var attr3 = $("<h4>").text("Ingenuity: " + data[0].CharacterAttr.attrInMax).addClass("center-align col s6");
+                var attr4 = $("<h4>").text("Presence: " + data[0].CharacterAttr.attrPrMax).addClass("center-align col s6");
+                var attr5 = $("<h4>").text("Resolve: " + data[0].CharacterAttr.attrReMax).addClass("center-align col s6");
+                var attr6 = $("<h4>").text("Strength: " + data[0].CharacterAttr.attrStMax).addClass("center-align col s6");
+                row1.append(attr1, attr2);
+                row2.append(attr3, attr4);
+                row3.append(attr5, attr6);
+                $("#attributes-here").append(row1, row2, row3);
+
+            });
+        };
+
+        function getCharacterId() {
+            var url = window.location.href;
+            var locate = url.indexOf("character");
+            var id = parseInt(url.slice(locate + 10));
+            return id;
+        }
+
+        $(document).ready(function () {
+            loadCharacter();
+        });
+
+
+    </script>
+
 </body>
 
 </html>

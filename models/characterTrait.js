@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     // I haven't seen characters with more than 12 traits, so this should be safe
     // Stores the ID value of the trait rather than all of the information associated with the trait
     let CharacterTrait = sequelize.define("CharacterTrait", {
@@ -77,12 +77,8 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     // Connect this to the Character
-    CharacterTrait.associate = function(models) {
-        CharacterTrait.belongsTo(models.Character, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
+    CharacterTrait.associate = function (models) {
+        CharacterTrait.hasOne(models.Character);
     };
 
     return CharacterTrait;

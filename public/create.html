@@ -160,7 +160,7 @@
         <form class="col s12">
           <div class="row" id="traitsHere">
 
-            
+
           </div>
         </form>
       </div>
@@ -330,52 +330,23 @@
 
       // Creation of object to pass to POST URLs
       // TODO create reference for stuff
-      var characterBase = {
-        "playerName": $("#player_name").val().trim(),
-        "charName": $("#first_name").val().trim(),
-        "image": $("#character_image").val().trim(),
-        "description": $("#character_description").val().trim(),
-        "background": $("#character_background").val().trim(),
-        "stuff": "stuff"
-      };
-      $.ajax({
-        headers: {
-          "Content-Type": "application/json"
-        },
-        type: "POST",
-        url: "api/characters/characters",
-        data: JSON.stringify(charTraits)
-      }).then(function (skillzData) {
-        console.log("Basic Info sent to database!");
-      });
 
       // TODO: correct references
       var charAttributes = {
-        "attrAwMax": $("attrAw").val(),
-        "attrAwCurr": $("attrAw").val(),
-        "attrCoMax": $("attrCo").val(),
-        "attrCoCurr": $("attrCo").val(),
-        "attrInMax": $("attrIn").val(),
-        "attrInCurr": $("attrIn").val(),
-        "attrPrMax": $("attrPr").val(),
-        "attrPrCurr": $("attrPr").val(),
-        "attrReMax": $("attrRe").val(),
-        "attrReCurr": $("attrRe").val(),
-        "attrStMax": $("attrSt").val(),
-        "attrStCurr": $("attrSt").val()
+        "attrAwMax": $("#attrAw").val(),
+        "attrAwCurr": $("#attrAw").val(),
+        "attrCoMax": $("#attrCo").val(),
+        "attrCoCurr": $("#attrCo").val(),
+        "attrInMax": $("#attrIn").val(),
+        "attrInCurr": $("#attrIn").val(),
+        "attrPrMax": $("#attrPr").val(),
+        "attrPrCurr": $("#attrPr").val(),
+        "attrReMax": $("#attrRe").val(),
+        "attrReCurr": $("#attrRe").val(),
+        "attrStMax": $("#attrSt").val(),
+        "attrStCurr": $("#attrSt").val()
       };
-      $.ajax({
-        headers: {
-          "Content-Type": "application/json"
-        },
-        type: "POST",
-        url: "api/characters/attributes",
-        data: JSON.stringify(charTraits)
-      }).then(function (skillzData) {
-        console.log("Attributes sent to database!");
-      });
 
-      // TODO: correct reference
       var charSkillz = {
         "skAthletics": $("#skAthletics").val(),
         "skConvince": $("#skConvince").val(),
@@ -390,17 +361,6 @@
         "skTechnology": $("#skTechnology").val(),
         "skTransport": $("#skTransport").val()
       };
-      $.ajax({
-        headers: {
-          "Content-Type": "application/json"
-        },
-        type: "POST",
-        url: "api/characters/skills",
-        data: JSON.stringify(charTraits)
-      }).then(function (skillzData) {
-        console.log("Skills sent to database!");
-      });
-
       // Format and load all of the trait that the player checked off
       var charTraits = {
         "trait1": 0,
@@ -424,21 +384,74 @@
           count++;
         }
       });
+      console.log(charTraits);
+      console.log(charSkillz);
+      console.log(charAttributes);
+
       $.ajax({
         headers: {
           "Content-Type": "application/json"
         },
         type: "POST",
-        url: "api/characters/traits",
-        data: JSON.stringify(charTraits)
-      }).then(function (data) {
-        console.log("Traits sent to database!");
+        url: "/api/characters/attributes",
+        data: JSON.stringify(charAttributes)
+      }).then(function (attributesData) {
+        console.log("Attributes sent to database!");
+        $.ajax({
+          headers: {
+            "Content-Type": "application/json"
+          },
+          type: "POST",
+          url: "/api/characters/skills",
+          data: JSON.stringify(charSkillz)
+        }).then(function (skillzData) {
+          console.log("Skills sent to database!");
+          $.ajax({
+            headers: {
+              "Content-Type": "application/json"
+            },
+            type: "POST",
+            url: "/api/characters/traits",
+            data: JSON.stringify(charTraits)
+          }).then(function (traitsData) {
+            console.log("Traits sent to database!");
+            var characterBase = {
+              "playerName": $("#player_name").val().trim(),
+              "charName": $("#first_name").val().trim(),
+              "image": $("#character_image").val().trim(),
+              "description": $("#character_description").val().trim(),
+              "background": $("#character_background").val().trim(),
+              "stuff": "stuff",
+              "CharacterAttrId": attributesData.id,
+              "CharacterSkillId": skillzData.id,
+              "CharacterTraitId": traitsData.id
+            };
+            $.ajax({
+              headers: {
+                "Content-Type": "application/json"
+              },
+              type: "POST",
+              url: "/api/characters",
+              data: JSON.stringify(characterBase)
+            }).then(function (charData) {
+              console.log("Basic Info sent to database!");
+
+              // window.open('https://the-what.herokuapp.com/');
+            });
+          });
+        });
       });
-     // window.open('https://the-what.herokuapp.com/');
+      // TODO: correct reference
+
+
+
+
+
+
 
     };
     $("#submit").on("click", formSubmit);
-    
+
 
   </script>
 </body>

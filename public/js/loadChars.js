@@ -5,7 +5,7 @@ function createCharCard(info) {
     divImage.append(image);
     var stacked = $("<div>").addClass("card-stacked");
     var content = $("<div>").addClass("card-content");
-    var name = $("<h4>").text(info.name);
+    var name = $("<h4>").text(info.charName);
     var description = $("<p>").text(info.description);
     content.append(name, description);
     var links = $("<div>").addClass("card-action");

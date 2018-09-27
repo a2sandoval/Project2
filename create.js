@@ -66,9 +66,11 @@ function controller() {
     });
     currentSkillPoints = amount1 + amount2 + amount3 + amount4 + amount5 + amount6 + traitCount;
     console.log("Current skill points " + currentSkillPoints)
+    
 
     if (currentSkillPoints <= 24) {
         remainingSkillPoints = maxSkillPoints - currentSkillPoints;
+        console.log("Curren remainder " + remainingSkillPoints);
         attributesUpdate()
         traitsUpdate();
     } else {
